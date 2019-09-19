@@ -1,6 +1,10 @@
 import React from "react";
 import axios from "axios";
+
 import MovieCard from "./MovieCard";
+import MovieUpdateForm from "./MovieUpdateForm";
+
+
 export default class Movie extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +34,13 @@ export default class Movie extends React.Component {
     const addToSavedList = this.props.addToSavedList;
     addToSavedList(this.state.movie);
   };
-
+  editMovie = () => {
+    
+    this.props.history.push(`/update-movie/${this.props.match.params.id}`);
+    this.props.getEditMovieInfo(this.state.movie);
+    
+    
+}
   render() {
     if (!this.state.movie) {
       return <div>Loading movie information...</div>;
@@ -39,9 +49,15 @@ export default class Movie extends React.Component {
     return (
       <div className="save-wrapper">
         <MovieCard movie={this.state.movie} />
+        
         <div className="save-button" onClick={this.saveMovie}>
           Save
         </div>
+        
+        <div className="edit-button" onClick={this.editMovie}>
+          Edit
+        </div>
+        
       </div>
     );
   }
