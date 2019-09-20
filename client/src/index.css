@@ -61,6 +61,22 @@ body {
   padding: 5px 10px;
   background-color: lightseagreen;
 }
+.edit-button {
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+.delete-button{
+  position: absolute;
+  top: 140px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
 .save-button:hover {
   background-color: green;
   color: white;
@@ -74,4 +90,61 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+.info-input-container{
+  margin: 10px auto;
+  width:480px;
+  
+  display:flex;
+  justify-content: space-between;
+}
+label{
+  font-weight: bold;
+  width:200px;
+  text-align: end;
+  font-size: 1.5rem;
+}
+.info-input{
+  background: #f2f2f2;
+  border: none;
+  border-bottom: 1px solid lightskyblue;
+  font-size: 1.3rem;
+}
+p.stars-list-info {
+  margin: 5px auto;
+  background: #f2f2f2;
+  border: none;
+  border-bottom: 1px solid lightskyblue;
+  font-size: 1.3rem;
+  width: 250px;
+}
+.button-edit{
+  width: 80px;
+  height:40px;
+  margin: 100px 50%;
+  background: lightseagreen;
+}
+.stars-info-input-container{
+  display:flex;
+  flex-direction: column;
+  
+  margin: 10px auto;
+  width:480px;
+}
+.stars-list{
+display:flex;
+flex-direction: column;
+margin: 0 auto 10px auto;
+
+}
+.button-edit-stars-container{
+width:250px;
+margin:0 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+}
+span{
+  text-decoration: underline;
 }
