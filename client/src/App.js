@@ -8,6 +8,7 @@ import MovieUpdateForm from "./Movies/MovieUpdateForm";
 const App = () => {
   const [savedList, setSavedList] = useState([]);
   const [editMovie, setEditMovie] = useState();
+  const [deletedMovie, setDeletedMovie] = useState();
 
   const addToSavedList = movie => {
     setSavedList([...savedList, movie]);
@@ -18,7 +19,10 @@ const App = () => {
     console.log(movie)
 
   }
-
+const getDeletedMovieInfo = movie => {
+ setDeletedMovie(movie);
+  console.log(movie);
+};
   return (
     <>
       <SavedList list={savedList} />
@@ -31,6 +35,7 @@ const App = () => {
               {...props}
               addToSavedList={addToSavedList}
               getEditMovieInfo={getEditMovieInfo}
+              getDeletedMovieInfo={getDeletedMovieInfo}
             />
           );
         }}
